@@ -16,85 +16,87 @@
     </header>
 
     <!--Main-->
-    <div class="row">
-      <div class="column">
-        <img src="img/img1.jpg" onclick="openModal();currentSlide(1)" class="thumbnail cursor">
-        <img src="img/img2.jpg" onclick="openModal();currentSlide(2)" class="thumbnail cursor">
-        <img src="img/img3.jpg" onclick="openModal();currentSlide(3)" class="thumbnail cursor">
-        <img src="img/img4.jpg" onclick="openModal();currentSlide(4)" class="thumbnail cursor">
-        <img src="img/img5.jpg" onclick="openModal();currentSlide(5)" class="thumbnail cursor">
-        <img src="img/img6.jpg" onclick="openModal();currentSlide(6)" class="thumbnail cursor">
-        <img src="img/img7.jpg" onclick="openModal();currentSlide(7)" class="thumbnail cursor">
-        <img src="img/img8.jpg" onclick="openModal();currentSlide(8)" class="thumbnail cursor">
+    <main>
+      <div class="row">
+        <div class="column">
+          <img src="img/img1.jpg" onclick="openModal();currentSlide(1)" class="thumbnail cursor">
+          <img src="img/img2.jpg" onclick="openModal();currentSlide(2)" class="thumbnail cursor">
+          <img src="img/img3.jpg" onclick="openModal();currentSlide(3)" class="thumbnail cursor">
+          <img src="img/img4.jpg" onclick="openModal();currentSlide(4)" class="thumbnail cursor">
+          <img src="img/img5.jpg" onclick="openModal();currentSlide(5)" class="thumbnail cursor">
+          <img src="img/img6.jpg" onclick="openModal();currentSlide(6)" class="thumbnail cursor">
+          <img src="img/img7.jpg" onclick="openModal();currentSlide(7)" class="thumbnail cursor">
+          <img src="img/img8.jpg" onclick="openModal();currentSlide(8)" class="thumbnail cursor">
+        </div>
       </div>
-    </div>
-
-    <div id="myModal" class="modal">
-      <span class="close cursor" onclick="closeModal()">&times;</span>
-      <div class="modal-content">
-        <div class="mySlides">
-          <img src="img/img1.jpg" style="max-width:100%;max-height:90vh">
+  
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+          <div class="mySlides">
+            <img src="img/img1.jpg" style="max-width:100%;max-height:90vh">
+          </div>
+          <div class="mySlides">
+            <img src="img/img2.jpg" style="max-width:100%;max-height:90vh">
+          </div>
+          <div class="mySlides">
+            <img src="img/img3.jpg" style="max-width:100%;max-height:90vh">
+          </div>
+          <div class="mySlides">
+            <img src="img/img4.jpg" style="max-width:100%;max-height:90vh">
+          </div>
+          <div class="mySlides">
+            <img src="img/img5.jpg" style="max-width:100%;max-height:90vh">
+          </div>
+          <div class="mySlides">
+            <img src="img/img6.jpg" style="max-width:100%;max-height:90vh">
+          </div>
+          <div class="mySlides">
+            <img src="img/img7.jpg" style="max-width:100%;max-height:90vh">
+          </div>
+          <div class="mySlides">
+            <img src="img/img8.jpg" style="max-width:100%;max-height:90vh">
+          </div>
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <div class="mySlides">
-          <img src="img/img2.jpg" style="max-width:100%;max-height:90vh">
-        </div>
-        <div class="mySlides">
-          <img src="img/img3.jpg" style="max-width:100%;max-height:90vh">
-        </div>
-        <div class="mySlides">
-          <img src="img/img4.jpg" style="max-width:100%;max-height:90vh">
-        </div>
-        <div class="mySlides">
-          <img src="img/img5.jpg" style="max-width:100%;max-height:90vh">
-        </div>
-        <div class="mySlides">
-          <img src="img/img6.jpg" style="max-width:100%;max-height:90vh">
-        </div>
-        <div class="mySlides">
-          <img src="img/img7.jpg" style="max-width:100%;max-height:90vh">
-        </div>
-        <div class="mySlides">
-          <img src="img/img8.jpg" style="max-width:100%;max-height:90vh">
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
       </div>
-    </div>
-
-    <script>
-    function openModal() {
-      document.getElementById("myModal").style.display = "block";
-    }
-    
-    function closeModal() {
-      document.getElementById("myModal").style.display = "none";
-    }
-    
-    var slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("demo");
-      if (n > slides.length) {slideIndex = 1}
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
+  
+      <script>
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
       }
-      slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
-      captionText.innerHTML = dots[slideIndex-1].alt;
-    }
-    </script>
+      
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+      
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+      </script>
+    </main>
 
     <!--Footer-->
     <footer>

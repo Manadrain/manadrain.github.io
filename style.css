@@ -2,6 +2,11 @@ html {
   height: 100%;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #f4ede3;
   display: flex;
@@ -34,10 +39,23 @@ h2 {
   color: #262626;
 }
 
+h3 {
+  margin-top: 3em;
+  margin-bottom: 1em;
+  color: #262626;
+}
+
 .email {
   float: right;
   margin-right: 10%;
   color: #262626;
+}
+
+.email2 {
+  float: right;
+  opacity: 0;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .copyright {
@@ -52,17 +70,29 @@ h2 {
   float: right;
   margin-right: 10%;
   color: #13aff0;
+  text-decoration: none;
 }
 
 .artwork {
   float: right;
   margin-right: 10%;
   color: #13aff0;
+  text-decoration: none;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+.about:hover,
+.artwork:hover {
+  text-decoration-line: underline;
+}
+
+.aboutText {
+  text-align: center;
+  margin: auto;
+  color: #262626;
+}
+
+.aboutText .pitch {
+  text-align: left;
 }
 
 .row {
@@ -134,7 +164,7 @@ img {
 
 .close:hover,
 .close:focus {
-  color: #999;
+  color: #808080;
   text-decoration: none;
   cursor: pointer;
 }
@@ -172,7 +202,7 @@ img {
 
 .prev:hover,
 .next:hover {
-  background-color: rgba(0, 0, 0, 0.5);
+  color: #808080;
 }
 
 .thumbnail:hover {
