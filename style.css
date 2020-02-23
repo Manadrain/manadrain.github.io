@@ -89,6 +89,7 @@ h3 {
   text-align: center;
   margin: auto;
   color: #262626;
+  margin-bottom: 50px;
 }
 
 .aboutText .pitch {
@@ -147,7 +148,7 @@ img {
 .modal-content {
   position: relative;
   margin: auto;
-  width: 90%;
+  width: 80%;
   text-align: center;
   top: 50%;
   transform: translate(0, -50%);
@@ -160,13 +161,16 @@ img {
   right: 25px;
   font-size: 35px;
   font-weight: bold;
+  z-index: 2;
+  padding: 10px;
+  opacity: .5;
 }
 
 .close:hover,
 .close:focus {
-  color: #808080;
   text-decoration: none;
   cursor: pointer;
+  opacity: 1;
 }
 
 .mySlides {
@@ -181,28 +185,77 @@ img {
 .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -32px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
+  top: 0;
+  width: 25%;
+  height: 100%;
   user-select: none;
   -webkit-user-select: none;
+  z-index: 1;
 }
 
-.next {
+.prev2,
+.next2 {
+  position: absolute;
+  top: 0;
+  width: 0;
+  height: 100%;
+  user-select: none;
+  -webkit-user-select: none;
+  opacity: 0;
+}
+
+.prev3,
+.next3 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+  user-select: none;
+  -webkit-user-select: none;
+  opacity: .5;
+}
+
+.next,
+.next2 {
   right: 0;
 }
 
-.prev {
+.prev,
+.prev2 {
   left: 0;
 }
 
-.prev:hover,
-.next:hover {
-  color: #808080;
+.next3 {
+  right: 5%;
+}
+
+.prev3 {
+  left: 5%;
+}
+
+.prev:hover ~ .prev2 {
+  background-image: linear-gradient(to right, rgba(127,127,127,0.5), rgba(0,0,0,0));
+  width: 10%;
+  opacity: 1;
+  transition: .25s;
+}
+
+.next:hover ~ .next2 {
+  background-image: linear-gradient(to left, rgba(127,127,127,0.5), rgba(0,0,0,0));
+  width: 10%;
+  opacity: 1;
+  transition: .25s;
+}
+
+.prev:hover ~ .prev3 {
+  opacity: 1;
+}
+
+.next:hover ~ .next3 {
+  opacity: 1;
 }
 
 .thumbnail:hover {
